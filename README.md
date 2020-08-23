@@ -17,8 +17,6 @@ pip3 install pyyaml
 
 Install MySQL on your terminal. Use the following to build the database and tables.
 
-$ mysql -u root -p
-
 mysql -u root -p 
 
 CREATE DATABASE flog_db
