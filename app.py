@@ -13,36 +13,36 @@ def about():
     return render_template('about.html')
 
 @app.route('/blogs/<int:id>/')
-    def blogs(id):
-        return render_template('blogs.html', blog_id=id)
+def blogs(id):
+    return render_template('blogs.html', blog_id=id)
 
 @app.route('/register/', methods=['GET','POST'])
-    def register():
-        return render_template('register.html')
+def register():
+    return render_template('register.html')
 
 @app.route('/login/', methods=['GET','POST'])
-    def login():
-        return render_template('login.html')
+def login():
+    return render_template('login.html')
 
 @app.route('/write-blog/', methods=['GET','POST'])
-    def write_blog():
-        return render_template('write_blog.html')
+def write_blog():
+    return render_template('write-blog.html')
 
 @app.route('/my-blogs/')
-    def my_blogs():
-        return render_template('my-blogs.html')
+def my_blogs():
+    return render_template('my-blogs.html')
 
-@app.route('/edit-blog/', methods=['GET','POST'])
-    def edit_blog():
-        return render_template('edit_blog.html')
+@app.route('/edit-blog/<int:id>', methods=['GET','POST'])
+def edit_blog():
+    return render_template('edit_blog.html')
 
-@app.route('/delete-blog/<int: id>', methods=['POST'])
-    def delete_blog():
-        return 'success'
+@app.route('/delete-blog/<int:id>', methods=['POST'])
+def delete_blog():
+    return 'success'
 
 @app.route('/logout/')
-    def logout():
-        return render_template('logout.html')
+def logout():
+    return render_template('logout.html')
 
 if __name__ == '__main__':
     app.run()
