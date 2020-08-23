@@ -15,7 +15,7 @@ pip3 install flask-mysqldb
 
 pip3 install pyyaml
 
-# Install MySQL on your terminal. Use the following to build the database and tables.
+Install MySQL on your terminal. Use the following to build the database and tables.
 
 $ mysql -u root -p
 
