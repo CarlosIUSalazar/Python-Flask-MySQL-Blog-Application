@@ -1,6 +1,10 @@
 # Python-Flask-MySQL-Blog-Application
 
-## Necessary depencencies:
+## Create virtual environment
+$ python3 -m venv venv   
+$ source venv/bin/activate   
+
+## Install necessary depencencies:
 
 $ pip3 install flask   
 
@@ -14,7 +18,7 @@ $ pip3 install flask-mysqldb
 
 $ pip3 install pyyaml
 
-### Install MySQL on your terminal. Use the following to build the database and tables.
+## Install MySQL on your terminal. Use the following to build the database and tables.
 
 $ mysql -u root -p 
 
@@ -25,3 +29,6 @@ $ USE flog_db
 $ CREATE TABLE user(user_id int auto_increment, first_name varchar(20), last_name varchar(20), username varchar(20) unique, email varchar(30) unique, password varchar(100), primary key(user_id));
 
 $ CREATE TABLE blog(blog_id int auto_increment,title varchar(100), author varchar(40), body varchar(1000), primary key(blog_id));
+
+### Run App
+$ python3 app.py
